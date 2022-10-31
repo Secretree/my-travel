@@ -3,7 +3,7 @@ ul{
     list-style-type: none;
     margin: 0;
     padding: 0;
-    background-color: #333;
+    background-color: rgb(0, 0, 0);
 }
 li{
     float: left;
@@ -19,7 +19,7 @@ li a{
     padding-left: 120px;
 }
 li a:hover{
-    background-color: #0037ff;
+    background-color: #0b0490;
 }
 img {
     float:left;
