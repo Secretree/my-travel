@@ -7,6 +7,21 @@
     <title>Southern Caribbean</title>
     <link rel="icon" type="image/png" sizes="32x32" href="images/palm_tree.png">
     <link rel="stylesheet" href="styles.css">
+    <style>
+        .Southern-Caribbean {
+            float: right;
+            margin: none;
+        }
+        button {
+            margin-left: 1400px;
+            font-size: 20px;
+            background-color: rgb(0, 217, 255);
+        }
+        h3 {
+            margin-top: 75px;
+            font-size: 30px;
+        }
+    </style>
 </head>
 <body style="background-color: #b0e0e6;">
     <ul>
@@ -19,5 +34,31 @@
     <img src="images/southern_caribbean-info-image.jpg">
     <h1>Southern Caribbean</h1>
     <h2>The Southern Caribbean is a group of islands that neighbor mainland South America in the West Indies. Saint Lucia lies to the north of the region, Barbados in the east, Trinidad and Tobago at its southernmost point, and Aruba at the most westerly section. The Southern Caribbean has the Caribbean to the north and west, the Atlantic Ocean on the east, and the Gulf of Paria to the south. Most of the islands are in the Windward Islands and the Leeward Antilles. Geologically, the islands are referred to as being a sub-continent of North America, although most islands sit on the South American continental plate. All of the Southern Caribbean islands are small, and are either volcanic or made of limestone coral, as they form at the ridge of the Caribbean and South American tectonic plates.</h2>
+    <button id="change-pictures">Click to see images from my trip!</button>
+    <br>
+    <img class="Southern-Caribbean" id="image" src="images/saint-lucia.jpg">
+    <h3>When I traveled to Southern Caribbean, I was on a cruise called "Jewel of The Seas." We visited a bunch of nice caribbean islands including, San Juan, Barbados, St. Lucia, Antigua and Barbuda, Sint, Marteen, Us Virgin Islands, and St. Thomas. We ate many delicious meals when we were there. We also did many fun activities, such as, water slides, playing at the beach and making sand castles, and swimming. Also, funny story, when we were at one island, I really had to go to the bathroom, but they were charging $1 per visit to the bathroom, so our entire family just decided to wait and hold it until we got back on the cruise.</h3>
+    <script>
+        var pictures=["images/saint-lucia.jpg", "images/saint-lucia-2.jpg", "images/antigua.jpg", "images/st-thomas.jpg"]
+        counter=0
+        const image = document.getElementById("image");
+        function switchPicture(){
+            counter++;
+            if(counter % pictures.length==0){
+                image.src  = pictures[0];
+            }
+            else if(counter % pictures.length== 1){
+                image.src = pictures[1];
+            }
+            else if(counter % pictures.length == 2){
+                image.src = pictures[2];
+            }
+            else if(counter % pictures.length == 3){
+                image.src = pictures[3];
+            }
+            
+        }
+        document.getElementById("change-pictures").addEventListener("click",switchPicture);
+    </script>
 </body>
 </html>
