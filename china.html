@@ -19,5 +19,43 @@
     <img src="images/china-info-image.jpg">
     <h1>China</h1>
     <h2>China is the world’s most populous country with a population of 1.44 billion people. It has quickly become the second largest economy in the word. And, it is the world’s third biggest country by territory. Key regions of China include: the North China Plain, the Loess Plateau, the Southeast Coast and Shanghai, the Yangzi Valley, the Sichuan Basin, Southwest Uplands, Xinjiang, Northeast (Manchuria), Qinghai and the Tibetan Plateau. Traditionally, China has recognized the distinctiveness of geographical regions, and some cities, such as Shanghai, Beijing, Tianjin, Chongqing, and Hong Kong, have special political and economic roles. The majority of people speak some variety of Mandarin Chinese as their first language, but there are several hundred languages in China.</h2>
+    <br><br><br><br><br><br><br><br><br><br>
+    <button id="change-pictures">Click to see images from my trip!</button>
+    <br>
+    <img class="image" id="image" src="images/china-image-1.jpg">
+    <h3>On my family's trip to China, we had a lot of fun there. We did a lot of fun activities, ate many delicious foods, and we also visited very many famous landmarks such as: The Great Wall of China, the Forbidden City, the Temple of Heaven, the Bird's Nest, and the Giant Wild Goose Pagoda. We also visited our relatives living in China and toured all their houses. When we visited The Great Wall of China, we also got to ride in these cool vehicles that carried us onto the wall and back down that were connected to a wire. When we went to the Bird's Nest, we toured the entire stadium and we saw the field that the 2008 Olympics was played on! Also, cool sotyr, when we arrived in China, because the timezones were so different from the US, it was 3:00 AM and I didn't even feel tired at all!</h3>
+    <script>
+        var pictures=["images/china-image-1.jpg", "images/china-image-2.jpg", "images/china-image-3.jpg", "images/china-image-4.jpg", "images/china-image-5.jpg", "images/china-image-6.jpg", "images/china-image-7.jpg", "images/china-image-8.jpg"]
+        counter=0
+        const image = document.getElementById("image");
+        function switchPicture(){
+            counter++;
+            if(counter % pictures.length==0){
+                image.src  = pictures[0];
+            }
+            else if(counter % pictures.length== 1){
+                image.src = pictures[1];
+            }
+            else if(counter % pictures.length == 2){
+                image.src = pictures[2];
+            }
+            else if(counter % pictures.length == 3){
+                image.src = pictures[3];
+            }
+            else if(counter % pictures.length == 4){
+                image.src = pictures[4];
+            }
+            else if(counter % pictures.length == 5){
+                image.src = pictures[5];
+            }
+            else if(counter % pictures.length == 6){
+                image.src = pictures[6];
+            }
+            else if(counter % pictures.length == 7){
+                image.src = pictures[7];
+            }
+        }
+        document.getElementById("change-pictures").addEventListener("click",switchPicture);
+    </script>
 </body>
 </html>
